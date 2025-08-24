@@ -1,0 +1,90 @@
+app/
+├── api/                         # Main API router loader
+│   └── v1/
+│       └── api_router.py        # Includes all versioned routes
+│
+├── chat/                        # Domain: Chat
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── models.py
+│   └── service.py
+│
+├── billing/                     # 💳 NEW Domain: Billing (e.g., plans, subscriptions)
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── schemas.py
+│   └── service.py
+|
+├── analytics/                   # Domain: Analytics
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── models.py
+│   └── service.py
+│
+├── companies/                   # Domain: Companies
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── models.py
+│   └── service.py
+│
+├── feedback/                    # Domain: Customer Feedback
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── models.py
+│   └── service.py
+│
+├── users/                       # Domain: Users
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── models.py
+│   └── service.py
+│
+├── auth/                        # Auth logic
+│   ├── __init__.py
+│   ├── rbac.py
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── hashing.py
+│   ├── jwt.py
+│   └── dependencies.py
+│
+├── db/                          # DB connection / init
+│   ├── __init__.py
+│   ├── database.py
+│   └── init_db.py
+│
+|
+├── data/                        # 🗂️ NEW Domain: Company Data & File Upload
+│   ├── __init__.py
+│   ├── models.py                # DataRecord, FileRecord
+│   ├── routes.py
+│   ├── schemas.py
+│   ├── service.py
+│   └── supabase_client.py  
+├── jobs/                        # Background jobs
+│   ├── __init__.py
+│   └── reset_usage.py
+│
+├── support/                     # Support logic
+│   ├── __init__.py
+│   ├── knowledge/
+│   │   ├── __init__.py
+│   │   └── rag.py
+│   └── tickets/
+│       ├── __init__.py
+│       └── services.py
+│
+├── core/                        # App config and startup
+│   ├── __init__.py
+│   ├── config.py
+│   ├── middleware.py
+│   └── startup.py
+│
+├── main.py                      # App entrypoint
+└── __init__.py
